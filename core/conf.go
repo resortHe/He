@@ -5,13 +5,15 @@ import (
 	"go_vue/config"
 	"go_vue/global"
 	"gopkg.in/yaml.v2"
+	"io/fs"
 	"io/ioutil"
 	"log"
 )
 
-// InitCore 读取yarm文件的配置
+const ConfigFile = "settings.yaml"
+
+// InitCore 读取yaml文件的配置
 func InitCore() {
-	const ConfigFile = "settings.yaml"
 	c := &config.Config{}
 	yamlConf, err := ioutil.ReadFile(ConfigFile)
 	if err != nil {
@@ -23,4 +25,19 @@ func InitCore() {
 	}
 	log.Println("config yamFile load Init success")
 	global.Config = c
+}
+func SetYaml() error {
+	bytes, err := yaml.Marshal(global.Config)
+
+	if err != nil {
+
+		return err
+	}
+	err = ioutil.WriteFile(ConfigFile, bytes, fs.ModePerm)
+	if err != nil {
+
+		return err
+	}
+	global.Log.Info("配置修改成功")
+	return nil
 }
