@@ -2,9 +2,9 @@ mysql:
   host: 127.0.0.1
   port: 3306
   config: "charset=utf8mb4&parseTime=True&loc=Local"
-  db: 
-  user:
-  password: 
+  db: vue_go
+  user: root
+  password: "123456"
   log_level: dev
 logger:
   level: info
@@ -23,16 +23,16 @@ site_info:
   created_at: "2023-06-09"
   bei_an: "nynu"
   title: "123"
-  qq_image: 
-  version: 
-  email:
-  wechat_image: 
+  qq_image: "http://www.fengfengzhidao.com/static/my/img/footer/qq.png"
+  version: "6.0.2"
+  email: "2693079065@qq.com"
+  wechat_image: "http://www.fengfengzhidao.com/static/my/img/footer/wechat.png"
   name: "个人博客"
   job: "毕业设计"
   addr: "nynu"
   slogan: "个人"
   slogan_en: "GEREN"
-  web: 
+  web: "http://www.fengfengzhidao.com"
   bilibili_url: "123"
   gitee_url: "123"
   github_url: "123"
@@ -42,10 +42,10 @@ qq:
   redirect: http://xx.xx.com/login?flag=qq
 qi_niu:
   enable: true
-  access_key: 配置自己七牛云的access_key
-  secret_key: 配置自己七牛云的secret_key
-  bucket: 自己的存储桶
-  cnd: xxx
+  access_key: je3pfQ0XQdoHXAj7pDxuARDhI46EAKnLIl4g3A6Y
+  secret_key: j6OyPztxb3tKPkFIsVoHnIEh4-jmMVyTgn37oVDX
+  bucket: nynugerenboke
+  cnd: http://rwahp1j5k.hn-bkt.clouddn.com/
   prefix: "gvb"
   zone: z2
   size: 5
@@ -56,13 +56,13 @@ jwt:
 email:
   host: smtp.qq.com
   port: 465
-  user: 发送人
-  password: 自己qq邮箱的密钥
+  user: 2693079065@qq.com
+  password: mqpgmfpvcncvddfd
   default_from_email: 个人博客
   use_ssl: true
   use_tls: false
 redis:
   ip: 127.0.0.1
   port: 6379
-  password: 
+  password: "redis"
   pool_size: 100
