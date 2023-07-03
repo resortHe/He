@@ -22,6 +22,7 @@ func (router RouterGroup) UserRouter() {
 		userRouterAdmin.Use(middleware.JwtAdmin())
 		userRouterAdmin.PUT("user_role", userApi.UserUpdateRoleView)
 		userRouterAdmin.DELETE("delete", userApi.UserRemoveView)
+		userRouterAdmin.GET("list", userApi.UserListView)
 		userRouterAdmin.POST("create_user", userApi.UserCreateView)
 	}
 	userRouterAuth := router.Group("user_auth")
