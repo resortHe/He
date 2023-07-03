@@ -12,7 +12,8 @@ func (router RouterGroup) MessageRouter() {
 		group.POST("create", messageApi.MessageCreateView)
 		group.GET("count", messageApi.MessageListView)
 		group.POST("record", messageApi.MessageRecordView)
+		group.DELETE("remove", messageApi.MessageRemoveView)
 	}
 	router.GET("messages_all", middleware.JwtAdmin(), messageApi.MessageListAllView)
-
 }
+
