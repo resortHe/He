@@ -16,8 +16,8 @@ func (UserApi) LogoutView(c *gin.Context) {
 	err := service.ServiceApp.UserSerVice.Logout(claims, token)
 	if err != nil {
 		global.Log.Error(err)
-		res.FailWithMsg("注销失败", c)
+		res.FailWithMsg("退出登录失败", c)
 		return
 	}
-	res.OkWithMsg("注销成功", c)
+	res.OkWithMsg("退出登录", c)
 }

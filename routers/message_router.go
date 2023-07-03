@@ -10,6 +10,9 @@ func (router RouterGroup) MessageRouter() {
 	group := router.Group("message").Use(middleware.JwtAuth())
 	{
 		group.POST("create", messageApi.MessageCreateView)
+		group.GET("count", messageApi.MessageListView)
+		group.POST("record", messageApi.MessageRecordView)
 	}
+	router.GET("messages_all", middleware.JwtAdmin(), messageApi.MessageListAllView)
 
 }
