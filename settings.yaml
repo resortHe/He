@@ -23,29 +23,29 @@ site_info:
   created_at: "2023-06-09"
   bei_an: "nynu"
   title: "123"
-  qq_image: "http://www.fengfengzhidao.com/static/my/img/footer/qq.png"
+  qq_image:
   version: "6.0.2"
-  email: "2693079065@qq.com"
-  wechat_image: "http://www.fengfengzhidao.com/static/my/img/footer/wechat.png"
+  email: 
+  wechat_image: 
   name: "个人博客"
   job: "毕业设计"
   addr: "nynu"
   slogan: "个人"
   slogan_en: "GEREN"
-  web: "http://www.fengfengzhidao.com"
+  web: 
   bilibili_url: "123"
   gitee_url: "123"
   github_url: "123"
 qq:
   app_id: xxx
   key: xx
-  redirect: http://xx.xx.com/login?flag=qq
+  redirect: 
 qi_niu:
   enable: true
-  access_key: je3pfQ0XQdoHXAj7pDxuARDhI46EAKnLIl4g3A6Y
-  secret_key: j6OyPztxb3tKPkFIsVoHnIEh4-jmMVyTgn37oVDX
-  bucket: nynugerenboke
-  cnd: http://rwahp1j5k.hn-bkt.clouddn.com/
+  access_key: 
+  secret_key: 
+  bucket:
+  cnd: 
   prefix: "gvb"
   zone: z2
   size: 5
@@ -56,8 +56,8 @@ jwt:
 email:
   host: smtp.qq.com
   port: 465
-  user: 2693079065@qq.com
-  password: mqpgmfpvcncvddfd
+  user:
+  password:
   default_from_email: 个人博客
   use_ssl: true
   use_tls: false
